@@ -18,11 +18,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
-    public Student() {
-    }
-
-
+  
     public String getStudentID() {
         return studentID;
     }

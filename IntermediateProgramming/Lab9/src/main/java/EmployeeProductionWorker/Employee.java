@@ -9,9 +9,9 @@ package EmployeeProductionWorker;
  * @author sam13
  */
 public class Employee {
-    public String employeeName;
-    public String employeeNumber;
-    public String hireDate;
+    private String employeeName;
+    private String employeeNumber;
+    private String hireDate;
 
     public Employee() {
         employeeName = "";

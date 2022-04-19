@@ -12,7 +12,7 @@ public class UndergraduateStudent extends Student {
     private int year;
 
     public UndergraduateStudent(int year) {
-        super();        
+        super("StudentID", "firstName", "lastName");        
         this.year = year;
     }
 
