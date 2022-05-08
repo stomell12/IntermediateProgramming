@@ -40,7 +40,6 @@ public class WordleProject {
                 guess = guess.toUpperCase();
 
                 String[] wordDisplay = {"_", "_", "_", "_", "_",};
-                String tempAnswer = correctWord;
                 //input validation
                 if (guess.length() != 5 || !guess.matches("[a-zA-Z]+")) {
                     System.out.println("Please enter a 5 letter term");
@@ -56,7 +55,7 @@ public class WordleProject {
                 {
                     String tempGuess = guess.substring(i, i+1);
                     //"Yellow Letter" code
-                    while(tempAnswer.contains(tempGuess)){
+                    while(correctWord.contains(tempGuess)){
                        if(!wordDisplay[i].equals("_"))
                          break;
                        wordDisplay[i] = "*";
