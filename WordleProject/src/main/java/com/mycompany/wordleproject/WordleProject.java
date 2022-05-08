@@ -5,7 +5,6 @@
 
 package com.mycompany.wordleproject;
 
-import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,9 +14,9 @@ import java.util.Scanner;
  */
 public class WordleProject {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
-        //I had tried to read the list from a text file, but couldn't get the random part working properly.
+        //I had tried to read the list from a text file, but couldn't get the random part working properly. Kept the text file so you can know the wordbank easier.
         System.out.println("##    #  ####  ###  ####  #    ####\n # # #  #  #  # #  #   # #    ###\n # #   ####  #  # ####  #### ####");
         System.out.println("Welcome to not-Wordle! Correct terms are 5 letter & computer/tech related.\nInstructions: _ means incorrect, * means it's there but in the wrong spot. \n            You have six guesses, good luck!");       
         String[] wordsList = {"bytes","macro","mouse","linux","drive","intel","apple","email","virus","files", "board", "basic", "radio", "coder", "cache", "cloud", "debug", "modem", "shell", "array", "pixel"};
@@ -84,8 +83,8 @@ public class WordleProject {
                 }
                 //loss condtion & scoring
                 if (guessCount == 6){
-                    System.out.println("You lost, try again! The correct word was " + correctWord + ". " + guessScores[guessCount-1] + " points.");
-                    userScore -= guessScores[guessCount-1];
+                    System.out.println("You lost, try again! The correct word was " + correctWord + ". " + "-3 points.");
+                    userScore -= 3;
                     System.out.println("Your score is: " + userScore);
                     gameInPlay = false;
                     break;
