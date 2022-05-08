@@ -100,8 +100,11 @@ public class WordleProject {
                 correctLetterCount = 0;
             } else if(input.equalsIgnoreCase("N")){
                 System.out.println("We're sad to see you go :(");
-                break;
-            }             
+                break;       
+            }
+            else {
+                System.out.println("Please enter Y or N");
+            }
         }
     }
 }
