@@ -25,12 +25,10 @@ public class WordleProject {
         boolean gameInPlay = true;
         boolean correct = false;
         int guessCount = 0;
-        int userScore = 0;
-        int correctLetterCount = 0;        
+        int userScore = 0;  
         
         while (gameInPlay = true) {
             //Selects a random word for each new game
-            Random r = new Random();
             int wordIndex = new Random().nextInt(wordsList.length);
             String correctWord = wordsList[wordIndex].toUpperCase();
             
@@ -44,7 +42,6 @@ public class WordleProject {
                 if (guess.length() != 5 || !guess.matches("[a-zA-Z]+")) {
                     System.out.println("Please enter a 5 letter term");
                     guess = ("     ");
-                    guessCount = guessCount + 0;
                 }
                 if (guess.length() == 5 && guess.matches("[a-zA-Z]+")) {
                     guessCount = guessCount + 1;
@@ -63,7 +60,6 @@ public class WordleProject {
                     //"Green Letter" code
                     if (correctWord.substring(i, i+1).equals(guess.substring(i, i+1))) {
                         wordDisplay[i] = correctWord.substring(i, i+1);
-                        correctLetterCount+=1;
                     }
                     //"Grey letters" are handled by the default "_" in the wordDisplay array
                 }
@@ -96,7 +92,6 @@ public class WordleProject {
                 gameInPlay = true;
                 correct = false;
                 guessCount = 0;
-                correctLetterCount = 0;
             } else if(input.equalsIgnoreCase("N")){
                 System.out.println("We're sad to see you go :(");
                 break;       
